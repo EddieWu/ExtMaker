@@ -144,9 +144,14 @@ return null;\
 #define ExtSourceFunGver " "
 
 //function IMEID_DoExtend:EXT do
+//20140124 Wujian modify Start
+// var _passwd = _ext_getPW(AppData['IMEID1']); -> var _passwd = _ext_getPW(MEID1);
 #define ExtSourceExtDo "IMEID_DoExtend=function()\
 {\
- var _passwd = _ext_getPW(AppData['IMEID1']);\
+var fix = GetIMEIDBit(AppData['IMEID1'],AppData['IMEID1'].indexOf('A')==-1?10:16);\
+var MEID1 = AppData['IMEID1'];\
+if(MEID1.length==14){MEID1=MEID1+fix;};\
+var _passwd = _ext_getPW(MEID1);\
   _HQ_SMLDO_PHOTOCHECK_\
   _HQ_SMLDO_ONE_\
   _HQ_SMLDO_TWO_\
@@ -154,23 +159,37 @@ return null;\
   _HQ_SMLDO_FOU_\
   return 0;\
 };"
+//20140124 Wujian modify End
 
 //function CHECK_DoExtend:EXT check
+//20140124 Wujian modify Start
+//AppData['IMEID1']->AppIMEID[0]
 #define ExtSourceExtCheck "CHECK_DoExtend=function()\
 {\
- var _passwd = _ext_getPW(AppData['IMEID1']);\
+ var _passwd = _ext_getPW(AppIMEID[0]);\
   _HQ_SMLCK_ONE_\
   _HQ_SMLCK_TWO_\
   _HQ_SMLCK_THR_\
   _HQ_SMLCK_FOU_\
   return 0;\
 };"
+//20140124 Wujian modify End
 
 //JS function backup define
-#define ExtSourceFunBk1 " "
+//20140124 Wujian modify Start
+//get imei or MEID fix function
+#define ExtSourceFunBk1 "function GetIMEIDBit(imeid, radix) {\
+if (radix != 10 && radix != 16){return false;}\
+if (imeid.length != 14 && imeid.length != 15){return false;}\
+var imeid14 = imeid.toUpperCase().split('');\
+var sum = 0;for (var i = 0; i < 14; i++) {var ii = parseInt(imeid14[i], radix);\
+if (i % 2 == 1) {ii *= 2;ii = ii >= radix ? (1 + ii % radix) : (ii % radix);}sum += ii;}\
+if (sum % radix == 0) {return '0';}\
+else {return (radix - sum % radix).toString(radix).toUpperCase();}};"
+//20140124 Wujian modify End
 #define ExtSourceFunBk2 " "
 #define ExtSourceFunBk3 " "
-
+#define YEPSWVersionLen (512)
 /////////////////////////////////////////////////////////////////////////////
 // CExtMakerDlg dialog
 

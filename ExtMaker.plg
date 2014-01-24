@@ -7,7 +7,7 @@
 </h3>
 <h3>Command Lines</h3>
 Creating command line "rc.exe /l 0x804 /fo"Release/ExtMaker.res" /d "NDEBUG" /d "_AFXDLL" "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\ExtMaker.rc"" 
-Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60A.tmp" with contents
+Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP432.tmp" with contents
 [
 /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ExtMaker.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
 "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\_md5.cpp"
@@ -16,21 +16,21 @@ Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60A.tmp" with conte
 "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\IniFile.cpp"
 "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\SMLFileWork.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60A.tmp" 
-Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60B.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP432.tmp" 
+Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP433.tmp" with contents
 [
 /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
 "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\base64.cpp"
 "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\md5.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60B.tmp" 
-Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60C.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP433.tmp" 
+Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP434.tmp" with contents
 [
 /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ExtMaker.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
 "E:\Project\SimLock\ExtMaker\ExtMaker_1.9\StdAfx.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60C.tmp" 
-Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60D.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP434.tmp" 
+Creating temporary file "C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP435.tmp" with contents
 [
 Shlwapi.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ExtMaker.pdb" /machine:I386 /out:"Release/ExtMaker.exe" 
 .\Release\_md5.obj
@@ -43,7 +43,7 @@ Shlwapi.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ExtMaker.pd
 .\Release\StdAfx.obj
 .\Release\ExtMaker.res
 ]
-Creating command line "link.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP60D.tmp"
+Creating command line "link.exe @C:\DOCUME~1\wujian\LOCALS~1\Temp\RSP435.tmp"
 <h3>Output Window</h3>
 Compiling resources...
 Compiling...

@@ -165,6 +165,10 @@ BOOL CExtMakerDlg::OnInitDialog()
 	((CEdit *)GetDlgItem(IDC_EDIT6))->SetLimitText(UINT_MAX);
 	((CEdit *)GetDlgItem(IDC_EDIT7))->SetLimitText(UINT_MAX);
 	//20121218 Wujian modify End
+	//20140124 Wujian modify Start
+	//YEP Software version length more than 500
+	((CEdit *)GetDlgItem(IDC_EDIT3))->SetLimitText(YEPSWVersionLen);
+	//20140124 Wujian modify End
 	return FALSE;  // return TRUE  unless you set the focus to a control
 }
 
